@@ -249,10 +249,9 @@ class V4Parser():
                     _row.append(self.pad_elm_to_as400_len(k, v))
                 _lines.append("".join(elm for elm in _row))
         
-        print(_lines[1])
         with open ("Sample_Radio_File.txt", "w") as outfp:
             for l in _lines:
-                outfp.write(l)
+                outfp.write(f"{l}\n")
 
 
     def pad_elm_to_as400_len(self, k, v):
